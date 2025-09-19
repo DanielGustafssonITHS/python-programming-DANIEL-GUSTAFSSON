@@ -1,36 +1,58 @@
-# randomize x and why from 1 to 10
-# create variable x and assign it random value 1-10
-# create variable y and assign it random value 1-10
 import random
 
-x = random.randint(1, 10)
-y = random.randint(1, 10)
-correct_answer = x * y
+
+score = 0
+play_again = "ja"
+
+# Mellan välkomsttext och loopen ska svårighetsgrad frågas om.
 
 print("MatematikSpelet, där du ska visa vad du kan när det kommer till multiplikation")
+difficulty = input("Vilken svårighetsgrad vill du ha? Lätt eller Svårt? ").lower()
 
+if difficulty == "lätt":
 
+    while play_again == "ja":
 
-# ask user x * y
-# Promt, what is x * y
-user_answer = int(input(f"Ditt tal är {x} * {y}, vad är ditt svar: "))
+        x = random.randint(1, 10)
+        y = random.randint(1, 10)
+        correct_answer = x * y
 
+        correct_answer = input(f"Vad är {x} x {y}? ")
 
+        if int(correct_answer) == x*y:
+            print("Rätt svar, bra jobbat!")
 
+            score += 1
 
-#was answer correct or not?
-# use if statement for right or wrong
-if user_answer == x * y:
-    print("Korrekt, bra jobbat!")
+        else:
+            print(f"Fel, rätt svar var {correct_answer}")
 
-elif user_answer != x * y:
-    print("Du hade fel, sopa.")    
+        play_again = input("Vill du spela igen? Ja eller Nej? ").lower()
+           
+        
 
+    print(f"Tack för att du har spelat! Din poäng blev {score}")
 
-# if correct, print compliment, if incorrect tell it was wrong and write the correct number.
+else:
 
+    while play_again == "ja":
 
+        z = random.randint(10, 100)
+        v = random.randint(10, 100)
+        correct_answer = z * v
 
-#Ask if the player wants to play again
+        correct_answer = input(f"Vad är {z} x {v}? ")
 
-#if no, end game, if yes. loop back to start again.
+        if int(correct_answer) == z*v:
+            print("Rätt svar, bra jobbat!")
+
+            score += 1
+
+        else:
+            print(f"Fel, rätt svar var {correct_answer}")
+
+        play_again = input("Vill du spela igen? Ja eller Nej? ").lower()
+           
+        
+
+        print(f"Tack för att du har spelat! Din poäng blev {score}")

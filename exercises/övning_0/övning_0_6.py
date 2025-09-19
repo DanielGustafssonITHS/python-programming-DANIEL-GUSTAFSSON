@@ -7,4 +7,4 @@ p2 = (3, 1, 0)    # x2, y2, z2
 
 distance = math.sqrt(((((p2[0] - p1[0]) ** 2 )) + ((p2[1] - p1[1]) ** 2 )) + ((p2[2] - p1[2]) ** 2 ))
 
-print(f"lengthen mellan punkterna är {distance:.2f} l.e.")
+print(f"Längden mellan punkterna är {distance:.2f} l.e.")
