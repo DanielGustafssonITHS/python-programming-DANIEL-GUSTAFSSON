@@ -1,6 +1,5 @@
 import matplotlib.pyplot as plt
 import matplotlib.lines as mlines
-import numpy as np
 import pandas as pd
 
 
